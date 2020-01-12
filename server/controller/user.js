@@ -17,7 +17,20 @@ const login = async function (ctx, next) {
         id: userInfo.id
       }
       const secret = 'vue-koa-demo'
-      const token = jwt.sign
+      const token = jwt.sign(userToken,secret)
+      ctx.response.body = {
+        success: true,
+        token: token
+      }
+    }
+  } else {
+    ctx.response.body = {
+      success: false,
+      info: '用户不存在！'
     }
   }
+}
+
+export default {
+  login
 }
