@@ -1,20 +1,21 @@
-export default function(sequelize, DataTypes) {
-  return sequelize.define('user',{
+/* jshint indent: 2 */
+
+module.exports = function(sequelize, DataTypes) {
+  return sequelize.define('user', {
     id: {
-      type: DataTypes.INTERGER(11),
+      type: DataTypes.INTEGER(11),
       allowNull: false,
-      primaryKey: true,
-      autoIncrement: true
+      primaryKey: true
     },
-    user_name: {
-      type: DataTypes.CHAR(50),
-      allowNull: false
+    username: {
+      type: DataTypes.STRING(45),
+      allowNull: true
     },
     password: {
-      type: DataTypes.CHAR(32),
-      allowNull: false
+      type: DataTypes.STRING(128),
+      allowNull: true
     }
   }, {
     tableName: 'user'
-  })
+  });
 };
