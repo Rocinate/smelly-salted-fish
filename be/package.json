@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "nodemon serve.js"
+    "serve": "node serve.js",
+    "dev": "nodemon serve.js"
   },
   "dependencies": {
     "@babel/core": "^7.8.0",
