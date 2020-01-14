@@ -64,14 +64,14 @@ export default {
       this.loading = true;
       this.form.validateFields((err, values) => {
         if (!err) {
-          this.$api.login
+          this.$api.user
             .login(values)
             .then(res => {
-              if (res.code === 0) {
+              if (res.code === 200) {
                 this.$message.success("登录成功！");
-                sessionStorage.setItem("token", 'over');
+                sessionStorage.setItem("token", res.token);
                 this.$router.push({
-                  path: "/index/overview",
+                  path: "/home",
                 });
               }
               this.loading = false;

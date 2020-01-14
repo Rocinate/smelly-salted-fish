@@ -11,11 +11,10 @@ app.use(async function(ctx, next) {
     await next()
   } catch(err) {
     if(err.status === 401) {
-      ctx.status = 401
+      ctx.status = 200
       ctx.body = {
-        success: false,
-        token: null,
-        info: '没有权限'
+        code: 401,
+        message: '没有权限'
       }
     } else {
       throw err

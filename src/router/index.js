@@ -25,10 +25,13 @@ const routes = [
       name: '后台管理',
       redirect: '/home/index',
       component: () => import('../views/index/index.vue'),
-      requireAuth: true,
       children: [{
-        path: '/index',
-
+        path: 'index',
+        name: '基本信息',
+        component: () => import('../views/index/base.vue'),
+        meta: {
+          requireAuth: true
+        }
       }]
     }]
   }

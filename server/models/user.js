@@ -16,7 +16,7 @@ const getUserById = async function(id) {
 const getUserByName = async function(name) {
   const userInfo = await User.findOne({
     where: {
-      user_name: name
+      username: name
     }
   })
   return userInfo

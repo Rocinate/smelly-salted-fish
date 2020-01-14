@@ -1,5 +1,7 @@
-import login from './api/login'
+import user from './api/user'
+import management from './api/manage'
 
 export default {
-  login
+  user,
+  management
 }

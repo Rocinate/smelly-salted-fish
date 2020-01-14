@@ -20,8 +20,8 @@
               <a-icon type="home" />
               <span>首页</span>
             </span>
-            <a-menu-item key="/index/overview">系统概览</a-menu-item>
-            <a-menu-item key="/index/account">账户设置</a-menu-item>
+            <a-menu-item key="/home/index">系统概览</a-menu-item>
+            <!-- <a-menu-item key="/index/account">账户设置</a-menu-item> -->
           </a-sub-menu>
           <a-sub-menu key="sub2">
             <span slot="title">
@@ -49,10 +49,10 @@
               <a-icon type="tool" />
               <span>内容</span>
             </span>
-              <a-menu-item key="/content/main">首页界面</a-menu-item>
-              <a-menu-item key="/content/story">品牌故事</a-menu-item>
-              <a-menu-item key="/content/news">品牌动态</a-menu-item>
-              <a-menu-item key="/content/service">定制服务</a-menu-item>
+            <a-menu-item key="/content/main">首页界面</a-menu-item>
+            <a-menu-item key="/content/story">品牌故事</a-menu-item>
+            <a-menu-item key="/content/news">品牌动态</a-menu-item>
+            <a-menu-item key="/content/service">定制服务</a-menu-item>
           </a-sub-menu>
           <a-sub-menu key="sub5">
             <span slot="title">
@@ -170,6 +170,6 @@ export default {
   padding-right: 16px;
 }
 #layouts {
-  min-width: 1250px
+  min-width: 1250px;
 }
 </style>
