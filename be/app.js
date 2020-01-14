@@ -3,8 +3,12 @@ import bodyParser from 'koa-bodyparser'
 import router from './server/router'
 import serve from 'koa-static'
 import path from 'path'
+import history from './server/config/history'
 
 const app = new Koa()
+app.use(history({
+  verbose: true//打出转发日志
+}));
 app.use(bodyParser())
 app.use(async function(ctx, next) {
   try{
@@ -22,7 +26,7 @@ app.use(async function(ctx, next) {
   }
 })
 router(app)
-app.use(serve(path.resolve('dist')))
+app.use(serve(path.resolve('../fe/dist')))
 app.listen(3000, () => {
   console.log('server is running at http://localhost:3000')
 })

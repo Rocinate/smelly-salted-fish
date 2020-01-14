@@ -2,7 +2,7 @@ import axios from 'axios'
 import router from '../store/index'
 import { message } from 'ant-design-vue'
 
-const baseUrl = '/api'
+const baseUrl = ''
 
 const reLogin = () => {
   router.replaceState({

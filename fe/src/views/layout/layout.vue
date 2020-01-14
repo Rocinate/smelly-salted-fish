@@ -23,7 +23,7 @@
             <a-menu-item key="/home/index">系统概览</a-menu-item>
             <!-- <a-menu-item key="/index/account">账户设置</a-menu-item> -->
           </a-sub-menu>
-          <a-sub-menu key="sub2">
+          <!-- <a-sub-menu key="sub2">
             <span slot="title">
               <a-icon type="shopping-cart" />
               <span>商品</span>
@@ -61,7 +61,7 @@
             </span>
             <a-menu-item key="/news/list">新闻列表</a-menu-item>
             <a-menu-item key="/news/add">添加新闻</a-menu-item>
-          </a-sub-menu>
+          </a-sub-menu> -->
         </a-menu>
       </a-layout-sider>
       <a-layout>
